@@ -31,10 +31,10 @@ DEBUG_LOG = INSTALL_DIR / "python_debug.log"
 CUSTOM_DOMAIN_FILE = INSTALL_DIR / "custom_domain.txt" # 存储最终使用的域名
 
 # ====== 全局可配置参数（可直接在此处修改） ======
-USER_NAME = os.getenv('USER_NAME', 'localhost'),        # 用户名
-UUID = os.getenv('UUID', 'localhost'),                     # UUID，留空则自动生成
-PORT = int(os.getenv('PORT', '3306')),                  # Vmess端口，留空或0则自动生成
-DOMAIN = os.getenv('DOMAIN', 'localhost'),                  # 域名，留空则自动获取
+USER_NAME = os.getenv('USER_NAME', 'localhost')       # 用户名
+UUID = os.getenv('UUID', 'localhost')                    # UUID，留空则自动生成
+PORT = int(os.getenv('PORT', '3306'))                # Vmess端口，留空或0则自动生成
+DOMAIN = os.getenv('DOMAIN', 'localhost')                 # 域名，留空则自动获取
 CF_TOKEN = os.getenv('CF_TOKEN', 'localhost')              # Cloudflare Token，留空则用Quick Tunnel
 # =========================================
 
