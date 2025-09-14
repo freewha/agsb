@@ -31,11 +31,11 @@ DEBUG_LOG = INSTALL_DIR / "python_debug.log"
 CUSTOM_DOMAIN_FILE = INSTALL_DIR / "custom_domain.txt" # 存储最终使用的域名
 
 # ====== 全局可配置参数（可直接在此处修改） ======
-USER_NAME = "kkdgdt43tfdggdfddytdlala"         # 用户名
-UUID = "65b2fcf7-7d93-4c32-b6a4-d7e7767bd873"                     # UUID，留空则自动生成
-PORT = 49999                   # Vmess端口，留空或0则自动生成
-DOMAIN = "jxcuc-cjsxcc.openlist.qzz.io"                   # 域名，留空则自动获取
-CF_TOKEN = "eyJhIjoiNmRmNWUwMTAwOGU1NGE2OGFmMDdhZDZjMTE2MDRmNWUiLCJ0IjoiMTg4ZTZiOTMtY2UwZi00YTg5LThmNzctOWJhODI0OTdjNmU0IiwicyI6Ill6VTVaRFF3Wm1NdFpUa3lPQzAwWlRrNUxXSXpNakl0TkRZME9UWTJZbUZpWVRJeSJ9"                 # Cloudflare Token，留空则用Quick Tunnel
+USER_NAME = os.getenv('USER_NAME', 'localhost'),        # 用户名
+UUID = os.getenv('UUID', 'localhost'),                     # UUID，留空则自动生成
+PORT = int(os.getenv('PORT', '3306')),                  # Vmess端口，留空或0则自动生成
+DOMAIN = os.getenv('DOMAIN', 'localhost'),                  # 域名，留空则自动获取
+CF_TOKEN = os.getenv('CF_TOKEN', 'localhost')              # Cloudflare Token，留空则用Quick Tunnel
 # =========================================
 
 # 添加命令行参数解析
